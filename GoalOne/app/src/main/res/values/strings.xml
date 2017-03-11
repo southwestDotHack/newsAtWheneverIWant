@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">GoalOne</string>
+    <string name="app_name">The Humble Beginning</string>
+    <string name="radius_set">Set Your News Radius</string>
 </resources>
