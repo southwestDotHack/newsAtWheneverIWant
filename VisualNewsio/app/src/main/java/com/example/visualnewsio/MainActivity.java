@@ -70,6 +70,10 @@ public class MainActivity extends AppCompatActivity
     private String[] mLikelyPlaceAttributions = new String[mMaxEntries];
     private LatLng[] mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
 
+    // List of different hues for markers
+    private float[] mLikelyPlaceColors = {BitmapDescriptorFactory.HUE_GREEN, BitmapDescriptorFactory.HUE_ORANGE,
+            BitmapDescriptorFactory.HUE_RED, BitmapDescriptorFactory.HUE_YELLOW};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -156,8 +160,9 @@ public class MainActivity extends AppCompatActivity
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.option_get_place) {
-            showCurrentPlace();
+        if (item.getItemId() == R.id.option_get_place)
+        {
+            
         }
         return true;
     }
@@ -201,6 +206,58 @@ public class MainActivity extends AppCompatActivity
 
         // Get the current location of the device and set the position of the map.
         getDeviceLocation();
+
+        if (mMap == null) {
+            return;
+        }
+
+        if (mLocationPermissionGranted) {
+            // Get the likely places - that is, the businesses and other points of interest that
+            // are the best match for the device's current location.
+            @SuppressWarnings("MissingPermission")
+            PendingResult<PlaceLikelihoodBuffer> result = Places.PlaceDetectionApi
+                    .getCurrentPlace(mGoogleApiClient, null);
+            result.setResultCallback(new ResultCallback<PlaceLikelihoodBuffer>() {
+                @Override
+                public void onResult(@NonNull PlaceLikelihoodBuffer likelyPlaces) {
+                    int i = 0;
+                    mLikelyPlaceNames = new String[mMaxEntries];
+                    mLikelyPlaceAddresses = new String[mMaxEntries];
+                    mLikelyPlaceAttributions = new String[mMaxEntries];
+                    mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
+                    for (PlaceLikelihood placeLikelihood : likelyPlaces) {
+                        // Build a list of likely places to show the user. Max 5.
+                        mLikelyPlaceNames[i] = (String) placeLikelihood.getPlace().getName();
+                        mLikelyPlaceAddresses[i] = (String) placeLikelihood.getPlace().getAddress();
+                        mLikelyPlaceAttributions[i] = (String) placeLikelihood.getPlace()
+                                .getAttributions();
+                        mLikelyPlaceLatLngs[i] = placeLikelihood.getPlace().getLatLng();
+                        mMap.addMarker(new MarkerOptions()
+                                .title(mLikelyPlaceNames[i])
+                                .position(mLikelyPlaceLatLngs[i])
+                                .snippet(mLikelyPlaceAddresses[i]))
+                                .setIcon(BitmapDescriptorFactory.defaultMarker(mLikelyPlaceColors[(int)(Math.random()*4)]));
+
+                        i++;
+                        if (i > (mMaxEntries - 1)) {
+                            break;
+                        }
+                    }
+                    // Release the place likelihood buffer, to avoid memory leaks.
+                    // likelyPlaces.release();
+
+                    // Show a dialog offering the user the list of likely places, and add a
+                    // marker at the selected place.
+                    // openPlacesDialog();
+                }
+            });
+        } else {
+            // Add a default marker, because the user hasn't selected a place.
+            mMap.addMarker(new MarkerOptions()
+                    .title(getString(R.string.default_info_title))
+                    .position(mDefaultLocation)
+                    .snippet(getString(R.string.default_info_snippet)));
+        }
     }
 
     /**
