@@ -1,0 +1,202 @@
+[
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.97577,
+        4.21048
+      ]
+    },
+    "properties": {
+      "title": "News Asia",
+      "description": "Several dead in Malaysia bus crash",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://www.aljazeera.com/news/asia-pacific/2013/08/201382110038824611.html",
+      "source": "Aljazeera",
+      "date": "2014-04-07"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -95.71289,
+        37.09024
+      ]
+    },
+    "properties": {
+      "title": "News Top Story",
+      "description": "Manning to be sentenced in Wikileaks case ",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://www.aljazeera.com/news/americas/2013/08/201382194656634692.html",
+      "source": "Aljazeera",
+      "date": "2014-04-07"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        138.25292,
+        36.20482
+      ]
+    },
+    "properties": {
+      "title": "News Asia",
+      "description": " Japan upgrades Fukushima leak danger level",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://www.aljazeera.com/news/asia-pacific/2013/08/20138217232845339.html",
+      "source": "Aljazeera",
+      "date": "2014-04-07"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        30.8025,
+        26.82055
+      ]
+    },
+    "properties": {
+      "title": "News Middle East",
+      "description": "Egypt court orders Mubarak released ",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://www.aljazeera.com/news/middleeast/2013/08/201382151326789174.html",
+      "source": "Aljazeera",
+      "date": "2014-04-07"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.3064,
+        33.5111
+      ]
+    },
+    "properties": {
+      "title": "News Middle East",
+      "description": "Hundreds reported killed in Syria gas attack ",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://www.aljazeera.com/news/middleeast/2013/08/201382163812810810.html",
+      "source": "Aljazeera",
+      "date": "2014-04-07"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        31.23571,
+        30.04442
+      ]
+    },
+    "properties": {
+      "title": "News Middle East",
+      "description": "Protesters attack presidential palace in Cairo, one person dies in clashes",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://edition.cnn.com/2013/02/01/world/meast/egypt-violence/index.html?hpt=imi_c2",
+      "source": "CNN",
+      "date": "2014-04-14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -3.70379,
+        40.41678
+      ]
+    },
+    "properties": {
+      "title": "News Europe",
+      "description": "Spain sees growing corruption scandals involving key institutions",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://edition.cnn.com/2013/01/31/world/europe/spain-corruption-scandals/index.html?hpt=ieu_c2",
+      "source": "",
+      "date": "2014-04-14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        104.1954,
+        35.86166
+      ]
+    },
+    "properties": {
+      "title": "News Asia",
+      "description": "Security experts: Times hacking story a wake-up call",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://edition.cnn.com/2013/02/01/tech/china-nyt-wakeup/index.html?hpt=ias_c1",
+      "source": "CNN",
+      "date": "2014-04-14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        69.34512,
+        30.37532
+      ]
+    },
+    "properties": {
+      "title": "News Europe Asia",
+      "description": "Officials: Militants target Pakistan army base in attack that leaves at least 35 dead",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://edition.cnn.com/2013/02/02/world/asia/pakistan-violence/index.html?hpt=ias_c2",
+      "source": "CNN",
+      "date": "2014-04-14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -77.05596,
+        38.91633
+      ]
+    },
+    "properties": {
+      "title": "News Top Story",
+      "description": "Turkish attack a reminder of Cold War dynamics",
+      "marker-color": "#fc4353",
+      "marker-size": "small",
+      "marker-symbol": "danger",
+      "url": "http://edition.cnn.com/2013/02/01/world/europe/turkey-explosion-terror-group/index.html?hpt=wo_c1",
+      "source": "CNN",
+      "date": "2014-04-14"
+    }
+  }
+]
