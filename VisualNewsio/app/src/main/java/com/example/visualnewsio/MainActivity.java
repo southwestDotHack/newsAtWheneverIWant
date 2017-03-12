@@ -232,10 +232,18 @@ public class MainActivity extends AppCompatActivity
                         mLikelyPlaceAttributions[i] = (String) placeLikelihood.getPlace()
                                 .getAttributions();
                         mLikelyPlaceLatLngs[i] = placeLikelihood.getPlace().getLatLng();
+                        mLikelyPlacePhoneNumber[i] = (String) placeLikelihood.getPlace().getPhoneNumber();
+
+                        String snippet = mLikelyPlaceAddresses[i];
+                        if (mLikelyPlacePhoneNumber[i] != "")
+                        {
+                            snippet += "\n" + mLikelyPlacePhoneNumber[i];
+                        }
+
                         mMap.addMarker(new MarkerOptions()
                                 .title(mLikelyPlaceNames[i])
                                 .position(mLikelyPlaceLatLngs[i])
-                                .snippet(mLikelyPlaceAddresses[i]))
+                                .snippet(snippet))
                                 .setIcon(BitmapDescriptorFactory.defaultMarker(mLikelyPlaceColors[(int)(Math.random()*4)]));
 
                         i++;
@@ -257,6 +265,31 @@ public class MainActivity extends AppCompatActivity
                     .title(getString(R.string.default_info_title))
                     .position(mDefaultLocation)
                     .snippet(getString(R.string.default_info_snippet)));
+        }
+
+        String json = loadJSONFromAsset();
+        JSONArray jsonArray = null;
+
+        if (json != null)
+        {
+            jsonArray = createJSONObject(json);
+        }
+        if(jsonArray != null) {
+            for (int index = 0; index < jsonArray.length(); index++) {
+                try {
+                    Integer markColor = (Integer) ((jsonArray.getJSONObject(index)).getJSONObject("properties")).get("marker-symbol");
+                    String title = (String) ((jsonArray.getJSONObject(index)).getJSONObject("properties")).get("description");
+                    Double lat = (Double) ((jsonArray.getJSONObject(index)).getJSONObject("geometry")).getJSONArray("coordinates").get(0);
+                    Double lon = (Double) ((jsonArray.getJSONObject(index)).getJSONObject("geometry")).getJSONArray("coordinates").get(1);
+                    LatLng pos = new LatLng(lat.doubleValue(),lon.doubleValue());
+                    mMap.addMarker(new MarkerOptions()
+                            .title(title)
+                            .position(pos))
+                            .setIcon(BitmapDescriptorFactory.defaultMarker(mLikelyPlaceColors[markColor.intValue()]));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
@@ -440,5 +473,47 @@ public class MainActivity extends AppCompatActivity
             mMap.getUiSettings().setMyLocationButtonEnabled(false);
             mLastKnownLocation = null;
         }
+    }
+    public String loadJSONFromAsset()
+    {
+        String json = null;
+        try
+        {
+
+            InputStream is = getAssets().open("news.json");
+
+            int size = is.available();
+
+            byte[] buffer = new byte[size];
+
+            is.read(buffer);
+
+            is.close();
+
+            json = new String(buffer, "UTF-8");
+
+
+        }
+        catch (IOException ex)
+        {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+
+    }
+
+    public JSONArray createJSONObject(String json)
+    {
+        try
+        {
+            JSONArray jsonobject = new JSONArray(json);
+            return jsonobject;
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
