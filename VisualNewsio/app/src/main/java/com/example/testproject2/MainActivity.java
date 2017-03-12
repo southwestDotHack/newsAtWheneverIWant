@@ -36,12 +36,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 /**
  * An activity that displays a map showing the place at the device's current location.
  */
-public class Shittivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity
         implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
 
-    private static final String TAG = Shittivity.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getSimpleName();
     private GoogleMap mMap;
     private CameraPosition mCameraPosition;
 
