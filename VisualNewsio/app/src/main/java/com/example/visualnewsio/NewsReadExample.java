@@ -1,4 +1,4 @@
-package com.example.myfirstapp;
+/*package com.example.visualnewsio;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -93,4 +93,4 @@ public class NewsReadExample extends AppCompatActivity {
 
         return json;
     }
-}
+}*/

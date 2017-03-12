@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.testproject2">
+    package="com.example.visualnewsio">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -27,11 +27,11 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="YOUR_KEY_HERE" />
 
         <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_shittivity">
+            android:name="com.example.visualnewsio.MainActivity"
+            android:label="@string/activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

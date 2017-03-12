@@ -1,7 +1,8 @@
-package com.example.testproject2;
+package com.example.visualnewsio;
 
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -28,10 +29,17 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * An activity that displays a map showing the place at the device's current location.
@@ -69,6 +77,7 @@ public class MainActivity extends AppCompatActivity
     private String[] mLikelyPlaceAddresses = new String[mMaxEntries];
     private String[] mLikelyPlaceAttributions = new String[mMaxEntries];
     private LatLng[] mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
+    private String[] mLikelyPlacePhoneNumber = new String[mMaxEntries];
 
     // List of different hues for markers
     private float[] mLikelyPlaceColors = {BitmapDescriptorFactory.HUE_GREEN, BitmapDescriptorFactory.HUE_ORANGE,
@@ -85,7 +94,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         // Retrieve the content view that renders the map.
-        setContentView(R.layout.activity_shittivity);
+        setContentView(R.layout.activity_main);
 
         // Build the Play services client for use by the Fused Location Provider and the Places API.
         // Use the addApi() method to request the Google Places API and the Fused Location Provider.
