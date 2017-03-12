@@ -11,6 +11,7 @@
     "properties": {
       "title": "News Asia",
       "description": "Several dead in Malaysia bus crash",
+      "body": "In Malaysia, several died in a bus crash. It was very tragic since people died. The bus, which crashed, ended up killing several people.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 0,
@@ -31,6 +32,7 @@
     "properties": {
       "title": "News Top Story",
       "description": "Manning to be sentenced in Wikileaks case ",
+      "body": "In a Wikileaks case, Manning was sentenced to something. The something was a sentence sentenced to Manning for the Wikileaks case.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 1,
@@ -51,6 +53,7 @@
     "properties": {
       "title": "News Asia",
       "description": " Japan upgrades Fukushima leak danger level",
+      "body": "The danger after Japan's Fukushima leak has led to an upgrade in danger levels. This is because of radioactivity, which is a result of the Fukushima leak.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 0,
@@ -71,6 +74,7 @@
     "properties": {
       "title": "News Middle East",
       "description": "Egypt court orders Mubarak released ",
+      "body": "Mubarak was ordered to be released by an Egypt court. The court, which is located in Egypt, ultimately decided to release Mubarak.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 1,
@@ -91,6 +95,7 @@
     "properties": {
       "title": "News Middle East",
       "description": "Hundreds reported killed in Syria gas attack ",
+      "body": "In Syria, a gas attack killed hundreds. These hundreds were people, who were killed by gas. The killing took place in Syria.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 0,
@@ -111,6 +116,7 @@
     "properties": {
       "title": "News Middle East",
       "description": "Protesters attack presidential palace in Cairo, one person dies in clashes",
+      "body": "In Cairo, protesters attack the presidential palace. During the clashes, one person died in the attack on the presidential palace in Cairo.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 0,
@@ -131,6 +137,7 @@
     "properties": {
       "title": "News Europe",
       "description": "Spain sees growing corruption scandals involving key institutions",
+      "body": "In Spain, corruption scandals are seen growing. The scandals involve key institutions, which are growing in corruption.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 1,
@@ -151,6 +158,7 @@
     "properties": {
       "title": "News Asia",
       "description": "Security experts: Times hacking story a wake-up call",
+      "body": "S3curiTeE iz br4kkon bye 1337 HaX0rz",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 3,
@@ -171,6 +179,7 @@
     "properties": {
       "title": "News Europe Asia",
       "description": "Officials: Militants target Pakistan army base in attack that leaves at least 35 dead",
+      "body": "A Pakistan army base was targeted by militants; as a result, at least 35 died.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 0,
@@ -191,6 +200,7 @@
     "properties": {
       "title": "News Top Story",
       "description": "Turkish attack a reminder of Cold War dynamics",
+      "body": "An attack in Turkey reminds us of the Cold War. The Cold War was a war that was cold, like a cold Turkey.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 0,
@@ -211,6 +221,7 @@
     "properties": {
       "title": "News Nearby",
       "description": "Hundreds of Students Die at Hackathon",
+      "body": "During SWHacks 2017, students die due to lack of sleep, insanity, and frustration at the ever advancing yet consistently nonsensical technology.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 0,
@@ -231,6 +242,7 @@
     "properties": {
       "title": "News Nearby",
       "description": "ASU Beats UofA Again",
+      "body": "In what could only be described as average, ASU kicks UofA's behind again in all possible aspects, but especially football.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 2,
@@ -251,6 +263,7 @@
     "properties": {
       "title": "News Nearby",
       "description": "Local Nutcase Tries to Fly",
+      "body": "Resident Spongebob Squarepants only has a few hours to finish his essay, yet he continues to goof off.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 3,
@@ -271,6 +284,7 @@
     "properties": {
       "title": "News Nearby",
       "description": "Man Survives Death",
+      "body": "Shockingly, a man who was thought to be dead, turned out to not be. The only possible explanation is that he somehow managed to survive death.",
       "marker-color": "#fc4353",
       "marker-size": "small",
       "marker-symbol": 3,
