@@ -249,11 +249,11 @@ public class MainActivity extends AppCompatActivity
                             snippet += "\n" + mLikelyPlacePhoneNumber[i];
                         }
 
-                        mMap.addMarker(new MarkerOptions()
-                                .title(mLikelyPlaceNames[i])
-                                .position(mLikelyPlaceLatLngs[i])
-                                .snippet(snippet))
-                                .setIcon(BitmapDescriptorFactory.defaultMarker(mLikelyPlaceColors[(int)(Math.random()*4)]));
+//                        mMap.addMarker(new MarkerOptions()
+//                                .title(mLikelyPlaceNames[i])
+//                                .position(mLikelyPlaceLatLngs[i])
+//                                .snippet(snippet))
+//                                .setIcon(BitmapDescriptorFactory.defaultMarker(mLikelyPlaceColors[(int)(Math.random()*4)]));
 
                         i++;
                         if (i > (mMaxEntries - 1)) {
